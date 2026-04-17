@@ -1,10 +1,10 @@
-# Windows 10 Performance Remediation Lab w/ ServiceNow
+# Dynamic Analysis of Malicious 3rd Party Software
 
 > [!WARNING]
 > Do not recreate at home. Some PUPs (Potentially Unwanted Programs) can escape VMs and infect the Host Device. While rare, this is a real possibility.
 
-## About the Lab
-The purpose of this lab is to showcase the workflow of a ServiceNow ticket involving a machine "infected" with various PUPs.
+## Abstract
+The purpose of this lab is to further the Cybersecurity field by providing Threat Intelligence on various 3rd party software. The range of software 
 ### Lab Environment and Components
 <details>
 <summary> Click to see Lab Environment and Components </summary>
@@ -33,7 +33,6 @@ The purpose of this lab is to showcase the workflow of a ServiceNow ticket invol
 
 
 ### Software/ Tools & Monitoring
-* Ticketing System: ServiceNow (Personal Developer Instance)
 * Performance Monitoring: Task Manager & Resource Monitor
 * Domain Index: [ICANN](https://lookup.icann.org/en/lookup), [GoDaddy WHOIS](https://www.godaddy.com/whois)
 
