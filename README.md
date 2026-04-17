@@ -136,4 +136,15 @@ Most installed PUPs utilized software bundling, prompting the user to install ot
 
 
 
+     <img width="564" height="355" alt="78" src="https://github.com/user-attachments/assets/44abfdf0-f99d-4d03-8844-e423a4140284" />
+
+
+
+    <img width="1006" height="622" alt="72" src="https://github.com/user-attachments/assets/664bc4b7-603c-435b-a67d-e53a3b5ba1c6" />
+
+
+
+
+    <img width="1008" height="626" alt="73" src="https://github.com/user-attachments/assets/ab363807-9f97-4484-81ba-94339ad3cfc6" />
+
 </details>
