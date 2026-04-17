@@ -4,7 +4,10 @@
 > Do not recreate at home. Some PUPs (Potentially Unwanted Programs) can escape VMs and infect the Host Device. While rare, this is a real possibility.
 
 ## Abstract
-The purpose of this lab is to further the Cybersecurity field by providing Threat Intelligence on various 3rd party software. The range of software 
+The purpose of this lab is to further the Cybersecurity field by providing Threat Intelligence on various 3rd party software. 
+The range of software analyzed include but are not limited to: AV Antirus, iWinGames, Minecraft 1.16.2 Torrent, Comodo Dragon Chromium Browser, and CC Cleaner 7.
+Analysis was conducted in a sandboxed Windows 10 Virtual Machine through Virtualbox Hypervisor. Monitoring was done through Task Manager and Resource Monitor as well as analyzing system changes or alerts during and after installation. Windows Defender and its' associated security measures were disabled to test the detection rate of web-installed Anitviruses and the full effect of installed PUPs.
+Most installed PUPs utilized software bundling, prompting the user to install other software. "AV Antivirus" and "Avast Antivrus" had an estimated 2/3~ detection rate of downloaded Malware and or suspicious files. However, "RAV Endpoint Detection" had the highest accuracy of all three web-installed Antiviruses. This software was able to detect approximately 3x~ the amount of Malware and or suspicious files as the other two.
 ### Lab Environment and Components
 <details>
 <summary> Click to see Lab Environment and Components </summary>
@@ -39,6 +42,7 @@ The purpose of this lab is to further the Cybersecurity field by providing Threa
 ## Methods for Simulated "Infection"
 ### Goal: Simulate a non-technical, negligent user searching the web for various "free" software.
 * Used Chrome Browser, Google Search Engine with various keywords to quickly locate PUP sites.
+* Windows Defender firewall and security measures were turned off.
   Keywords include:
   ~~~
   * free minecraft torrent download
@@ -50,8 +54,7 @@ The purpose of this lab is to further the Cybersecurity field by providing Threa
   * gta v apk download
   * free ram download
   ~~~
-  Additionally, each time a new "Download" button appeared on screen, or a software was reccomended it was to be clicked to simulate
-  bundled PUPs installed by third-party software.
+  Additionally, any time a new "Download" button appeared on screen, or a software was reccomended bundled with potenital PUPs, it was downloaded.
 
    <details>
         <summary>Click to see detailed Video Game Software Entries</summary>
@@ -67,7 +70,8 @@ The purpose of this lab is to further the Cybersecurity field by providing Threa
           Minecraft 1.16.2 Torrent was downloaded and uTorrent was used for seeding. Sofrware did not install as advertised.
           Instead, Minecraft Version 1.11 (Released four years earlier) was installed.
           Additionally, a strange version, small-window version of the 2016 client opened and it was entirely in Russian.
-          A UUID and Token string was automatically filled in, presumable a "legitimate" game token. World of Tanks, World of Warships, and War Thunder
+          A UUID and Token string was automatically filled in, presumable a "legitimate" game token. World of Tanks, World of
+          Warships, and War Thunder
           were offered and installed during installation. However, for one reason or another they did not function properly.
 
           Malware Detection: While untrustrable in a legitimate scenario, Avast and TotalAV Antiviruses immediately detected both the
@@ -83,17 +87,51 @@ The purpose of this lab is to further the Cybersecurity field by providing Threa
   
           Software: Play iWin Games
 
-          Description: 
+          Description: Advertises itself as a browser-based gaming platform hosting (allegedly) over five-thousand games.
+          Associated games are created and marketed towards children <14. The website heavily advertises various giveaways
+          and a monthly ($6.99) subscription
+          to access the entire catalog of games without advertisements. Upon visting, the website asks to download its'
+          launcher software and requests access to
+          apps on the device. Once installed it created a directory in the C:\ProgramFiles(x86) titled "iWin Games Manager V4."
+          This directory holds the launcher files and games. Once you click "play" on the site a game "downloads" to your device.
+          However, the location of locally stored game files were not located during testing.
+          It is unclear as of yet, how games are locally stored and what the true purpose of installing this software is,
+          outside of being a shortcut to the Website.
+          Currently, it is assumed that the website uses the default installed files as an "engine" to run various games.
+          Unfortunately, there were many issues directly related to playing these games. There was 1 instance of a game opening.
+          Outside of that, everytime a game was "played" the website displayed a network issue, despite having a strong connection.
+          It is not known if this is a direct result of the software detecting a Hypervisor and reacting.
 
-          ICANN Lookup Result:
+          ICANN Lookup Result: Each field was replaced with "anonymized" information via proxy services to hide contact information
+          in WHOIS directories. However, a LinkedIn page was found and contains the public profiles of high-level
+          employees of iWin, Inc. https://www.linkedin.com/company/iwin-inc./ Estimated revenue is $6m per year.
 
-          Host Location: 
-          ISP: 
+          Malware Detection Summary:
+          Total AV:
+          Detection Name: TR/W32.Malware
+          Suspected File: iWinGamesManager.exe
+          Action: Quarantined
+          Description: Upon installation of iWin Games Total AV IMMEDIATELY detected iWinGamesManager.exe as a Trojan
+          targeting Windows 32 Systems and moved it into quarantine.
           
+          Note: To summarize, iWin Games is a casual gaming development company that hosts a website offering several things.
+          Offers include thousands of free games, giveaways, and a monthly $6.99 subscription for ad-free gameplay. A launcher
+          file was suspected as Malware as soon as it was installed. It is of the author's opinion that iWin Games runs
+          a  business model based on predatory marketing tactics towards children to profit. These predatory marketing
+          tactics include large-banner giveaways all over the website, as well as monthly subscription advertisements.
+          On top of this there were many trackers discovered on the website also found on similiar PUPs/ Malware sites.
+          
+     <img width="856" height="312" alt="77" src="https://github.com/user-attachments/assets/6404f1f1-55ed-4ca4-ad46-0176f19a7415" />
 
 
 
 
+     <img width="827" height="352" alt="75" src="https://github.com/user-attachments/assets/ffcfa3f1-9ae0-4151-b30b-b9dc2b59d487" />
+
+     
+
+
+     <img width="824" height="398" alt="76" src="https://github.com/user-attachments/assets/54a581c5-987b-4afe-b2f3-96f2a459ad5e" />
 
 
 
